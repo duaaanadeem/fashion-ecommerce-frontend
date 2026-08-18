@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog — NOIR GIRLS</title>
+  <meta name="description" content="Explore girls aesthetic oversized streetwear and graphic tees.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111111'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='%23ffffff' text-anchor='middle' font-family='sans-serif'>N</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#catalog-main" class="skip-link">Skip to catalog products</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-left">
+      <button type="button" class="menu-btn" aria-label="Toggle Menu">☰</button>
+      <nav class="primary-nav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active" aria-current="page">Collections</a></li>
+          <li><a href="index.html#new-week-heading">New</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="brand-logo">
+      <a href="index.html" aria-label="NOIR GIRLS Homepage">
+        <span class="logo-mark">▲</span>
+        <span class="logo-text">NOIR</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="products.html" class="icon-circle" aria-label="Wishlist">♡</a>
+      <a href="checkout.html" class="cart-pill" aria-label="Cart"><span>Cart</span><span class="cart-badge">2</span></a>
+      <a href="checkout.html" class="icon-circle" aria-label="Account">👤</a>
+    </div>
+  </header>
+
+  <main class="catalog-layout" id="catalog-main">
+    <!-- Active Responsive Sidebar Filters -->
+    <aside class="filters-sidebar" aria-labelledby="filter-title">
+      <h2 id="filter-title" class="sr-only">Catalog Filter Controls</h2>
+      
+      <!-- Size Filter -->
+      <div class="filter-group">
+        <h3>SIZE</h3>
+        <div class="size-boxes">
+          <button type="button" class="size-btn" onclick="filterBySize('XS', this)">XS</button>
+          <button type="button" class="size-btn active" onclick="filterBySize('all', this)">S</button>
+          <button type="button" class="size-btn" onclick="filterBySize('M', this)">M</button>
+          <button type="button" class="size-btn" onclick="filterBySize('L', this)">L</button>
+          <button type="button" class="size-btn" onclick="filterBySize('XL', this)">XL</button>
+        </div>
+      </div>
+
+      <!-- Availability Filter -->
+      <div class="filter-group">
+        <h3>AVAILABILITY</h3>
+        <label class="checkbox-row">
+          <input type="checkbox" id="chk-instock" checked onchange="applyFilters()"> 
+          In Stock <span id="count-instock">(6)</span>
+        </label>
+        <label class="checkbox-row">
+          <input type="checkbox" id="chk-outstock" checked onchange="applyFilters()"> 
+          Out of Stock <span id="count-outstock">(2)</span>
+        </label>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-group">
+        <h3>CATEGORY</h3>
+        <ul class="filter-links">
+          <li><button type="button" class="link-btn active" onclick="filterByCategory('all', this)">All Items <span>(8)</span></button></li>
+          <li><button type="button" class="link-btn" onclick="filterByCategory('graphic', this)">Graphic Tees <span>(3)</span></button></li>
+          <li><button type="button" class="link-btn" onclick="filterByCategory('polo', this)">Cropped Polos <span>(2)</span></button></li>
+          <li><button type="button" class="link-btn" onclick="filterByCategory('knits', this)">Vintage Knits <span>(2)</span></button></li>
+          <li><button type="button" class="link-btn" onclick="filterByCategory('denim', this)">Denim Shirts <span>(1)</span></button></li>
+        </ul>
+      </div>
+
+      <!-- Price Slider Filter -->
+      <div class="filter-group">
+        <h3>PRICE RANGE</h3>
+        <label for="price-range" class="sr-only">Maximum price filter</label>
+        <input type="range" id="price-range" min="30" max="150" value="150" class="range-slider" oninput="filterByPrice(this.value)">
+        <div class="price-limits">
+          <span>$30</span>
+          <span id="price-indicator">Max: $150</span>
+          <span>$150</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Catalog Content Grid -->
+    <section class="catalog-content" aria-labelledby="catalog-title">
+      <div class="catalog-header-bar">
+        <h1 id="catalog-title">ALL GIRLS' TEES <sup id="total-visible-count">(08)</sup></h1>
+        <div class="sort-selector">
+          <label for="sort-select">Sort By:</label>
+          <select id="sort-select" onchange="sortProducts(this.value)">
+            <option value="default">Featured</option>
+            <option value="low-high">Price: Low to High</option>
+            <option value="high-low">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="product-grid-3" id="catalog-grid">
+        
+        <!-- Product 1 -->
+        <article class="product-card" data-category="graphic" data-price="55" data-stock="in">
+          <a href="product-detail.html?img=product1.jpg&title=California%20Graphic%20Tee&price=$55.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product1.jpg" alt="California Graphic Tee" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Heavyweight</span>
+              <h3>California Graphic Tee</h3>
+              <p class="item-price">$55.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="product-card" data-category="knits" data-price="85" data-stock="in">
+          <a href="product-detail.html?img=product2.jpg&title=Varsity%2089%20Knit%20Sweater&price=$85.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product2.jpg" alt="Varsity 89 Knit Sweater" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Summer Knit</span>
+              <h3>Varsity 89 Knit Sweater</h3>
+              <p class="item-price">$85.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="product-card" data-category="graphic" data-price="65" data-stock="in">
+          <a href="product-detail.html?img=product3.jpg&title=Butterfly%20Floral%20Tee&price=$65.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product3.jpg" alt="Butterfly Floral Tee" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Embroidered</span>
+              <h3>Butterfly Floral Tee</h3>
+              <p class="item-price">$65.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="product-card" data-category="polo" data-price="48" data-stock="in">
+          <a href="product-detail.html?img=product4.jpg&title=Pastel%20Stripe%20Polo%20Top&price=$48.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product4.jpg" alt="Pastel Stripe Polo" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Cropped Ribbed</span>
+              <h3>Pastel Stripe Polo Top</h3>
+              <p class="item-price">$48.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="product-card" data-category="denim" data-price="95" data-stock="in">
+          <a href="product-detail.html?img=product5.jpg&title=Denim%20Relaxed%20Shirt&price=$95.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product5.jpg" alt="Denim Relaxed Shirt" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Washed Chambray</span>
+              <h3>Denim Relaxed Shirt</h3>
+              <p class="item-price">$95.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 6 (Out of Stock) -->
+        <article class="product-card out-of-stock" data-category="knits" data-price="75" data-stock="out">
+          <a href="product-detail.html?img=product6.jpg&title=Navy%20Stripe%20Knit%20Polo&price=$75.00&stock=out">
+            <div class="card-img-wrapper">
+              <span class="stock-badge">Sold Out</span>
+              <img src="assets/images/product6.jpg" alt="Navy Stripe Knit Polo" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Knitted Polo</span>
+              <h3>Navy Stripe Knit Polo</h3>
+              <p class="item-price">$75.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 7 -->
+        <article class="product-card" data-category="graphic" data-price="50" data-stock="in">
+          <a href="product-detail.html?img=product7.jpg&title=Vintage%20Cherry%20Tee&price=$50.00&stock=in">
+            <div class="card-img-wrapper">
+              <img src="assets/images/product7.jpg" alt="Vintage Cherry Tee" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Vintage Jersey</span>
+              <h3>Vintage Cherry Tee</h3>
+              <p class="item-price">$50.00</p>
+            </div>
+          </a>
+        </article>
+
+        <!-- Product 8 (Out of Stock) -->
+        <article class="product-card out-of-stock" data-category="polo" data-price="52" data-stock="out">
+          <a href="product-detail.html?img=product8.jpg&title=Ribbon%20Bow%20Statement%20Tee&price=$52.00&stock=out">
+            <div class="card-img-wrapper">
+              <span class="stock-badge">Sold Out</span>
+              <img src="assets/images/product8.jpg" alt="Ribbon Bow Statement Tee" width="300" height="400">
+            </div>
+            <div class="card-details">
+              <span class="item-tag">Boxy Fit</span>
+              <h3>Ribbon Bow Statement Tee</h3>
+              <p class="item-price">$52.00</p>
+            </div>
+          </a>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-layout">
+      <div class="footer-col">
+        <h3>BRAND INFORMATION</h3>
+        <ul>
+          <li><a href="index.html#about">About NOIR GIRLS</a></li>
+          <li><a href="products.html">Sustainable Sourcing</a></li>
+          <li><a href="products.html">Careers</a></li>
+          <li><a href="checkout.html">Press Inquiries</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>CUSTOMER SUPPORT</h3>
+        <ul>
+          <li><a href="product-detail.html">Size & Measurements Guide</a></li>
+          <li><a href="checkout.html">Shipping & Return Policies</a></li>
+          <li><a href="checkout.html">Order Tracking</a></li>
+          <li><a href="checkout.html">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <form class="newsletter-box" action="index.html" method="get">
+          <h3>NEWSLETTER SUBSCRIPTION</h3>
+          <p>Sign up to receive early notifications on limited seasonal drops.</p>
+          <div class="newsletter-group">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">JOIN</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p>&copy; 2026 NOIR GIRLS. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Real Interactive Filtering Script -->
+  <script>
+    let activeCategory = 'all';
+    let maxPrice = 150;
+
+    function applyFilters() {
+      const showInStock = document.getElementById('chk-instock').checked;
+      const showOutStock = document.getElementById('chk-outstock').checked;
+      const cards = document.querySelectorAll('#catalog-grid .product-card');
+      let visibleCount = 0;
+
+      cards.forEach(card => {
+        const cat = card.getAttribute('data-category');
+        const price = parseFloat(card.getAttribute('data-price'));
+        const stock = card.getAttribute('data-stock');
+
+        const matchesCat = (activeCategory === 'all' || cat === activeCategory);
+        const matchesPrice = (price <= maxPrice);
+        const matchesStock = (stock === 'in' && showInStock) || (stock === 'out' && showOutStock);
+
+        if (matchesCat && matchesPrice && matchesStock) {
+          card.style.display = 'flex';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      document.getElementById('total-visible-count').textContent = `(0${visibleCount})`;
+    }
+
+    function filterByCategory(cat, btn) {
+      activeCategory = cat;
+      document.querySelectorAll('.filter-links .link-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    function filterByPrice(val) {
+      maxPrice = parseFloat(val);
+      document.getElementById('price-indicator').textContent = 'Max: $' + val;
+      applyFilters();
+    }
+
+    function filterBySize(size, btn) {
+      document.querySelectorAll('.size-boxes .size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function sortProducts(criteria) {
+      const grid = document.getElementById('catalog-grid');
+      const cards = Array.from(grid.children);
+
+      if (criteria === 'low-high') {
+        cards.sort((a, b) => parseFloat(a.dataset.price) - parseFloat(b.dataset.price));
+      } else if (criteria === 'high-low') {
+        cards.sort((a, b) => parseFloat(b.dataset.price) - parseFloat(a.dataset.price));
+      }
+
+      cards.forEach(c => grid.appendChild(c));
+    }
+  </script>
+
+</body>
+</html>

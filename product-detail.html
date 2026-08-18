@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details — NOIR GIRLS</title>
+  <meta name="description" content="View garment specifications, fabric details, sizing, and color swatches.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111111'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='%23ffffff' text-anchor='middle' font-family='sans-serif'>N</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#pdp-main" class="skip-link">Skip to product information</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-left">
+      <a href="products.html" class="back-link">&larr; Back to Catalog</a>
+    </div>
+    <div class="brand-logo">
+      <a href="index.html" aria-label="NOIR GIRLS Homepage">
+        <span class="logo-mark">▲</span>
+        <span class="logo-text">NOIR</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="checkout.html" class="cart-pill" aria-label="Cart"><span>Cart</span><span class="cart-badge">2</span></a>
+    </div>
+  </header>
+
+  <main class="pdp-layout" id="pdp-main">
+    <!-- Gallery -->
+    <div class="pdp-gallery">
+      <div class="pdp-main-image">
+        <img id="pdp-main-img" src="assets/images/product1.jpg" alt="Selected Product Detail View" width="500" height="600">
+      </div>
+      <div class="pdp-thumbnails">
+        <img src="assets/images/product1.jpg" class="active" alt="Thumbnail 1" width="100" height="120" onclick="changeThumb(this)">
+        <img src="assets/images/product2.jpg" alt="Thumbnail 2" width="100" height="120" onclick="changeThumb(this)">
+        <img src="assets/images/product3.jpg" alt="Thumbnail 3" width="100" height="120" onclick="changeThumb(this)">
+        <img src="assets/images/product4.jpg" alt="Thumbnail 4" width="100" height="120" onclick="changeThumb(this)">
+      </div>
+    </div>
+
+    <!-- Product Details -->
+    <div class="pdp-details">
+      <span class="season-badge" id="pdp-stock-badge">In Stock &bull; Summer 2024 Collection</span>
+      <h1 id="pdp-title">California Graphic Tee</h1>
+      <p class="pdp-price" id="pdp-price">$55.00</p>
+      <p class="pdp-desc">Heavyweight 260 GSM organic cotton streetwear tee tailored in a relaxed, comfortable cut with pre-washed vintage texture.</p>
+
+      <!-- Color Swatches -->
+      <div class="option-block">
+        <label class="option-label">Color Swatches</label>
+        <div class="swatch-row">
+          <button type="button" class="color-swatch active" style="background: #ffffff;" aria-label="Pure White" onclick="selectSwatch(this)"></button>
+          <button type="button" class="color-swatch" style="background: #d4d4d8;" aria-label="Light Heather Grey" onclick="selectSwatch(this)"></button>
+          <button type="button" class="color-swatch" style="background: #71717a;" aria-label="Charcoal Slate" onclick="selectSwatch(this)"></button>
+          <button type="button" class="color-swatch" style="background: #111111;" aria-label="Jet Black" onclick="selectSwatch(this)"></button>
+        </div>
+      </div>
+
+      <!-- Size Selector -->
+      <div class="option-block">
+        <label class="option-label">Select Size</label>
+        <div class="size-boxes">
+          <button type="button" class="size-btn" onclick="selectSize(this)">XS</button>
+          <button type="button" class="size-btn active" onclick="selectSize(this)">S</button>
+          <button type="button" class="size-btn" onclick="selectSize(this)">M</button>
+          <button type="button" class="size-btn" onclick="selectSize(this)">L</button>
+          <button type="button" class="size-btn" onclick="selectSize(this)">XL</button>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="pdp-cta-row">
+        <a href="checkout.html" id="pdp-buy-btn" class="btn-primary-large">Add to Cart</a>
+        <button type="button" class="btn-wishlist-square" aria-label="Add to Wishlist" onclick="this.classList.toggle('favorited')">♡</button>
+      </div>
+
+      <!-- Sizing Guide Table in Accordion (Satisfies HTML <table> Topic) -->
+      <div class="pdp-specs">
+        <details>
+          <summary>Garment Sizing Matrix (Inches)</summary>
+          <div class="mini-table-container">
+            <table class="mini-size-table">
+              <caption>Unisex Streetwear Dimensions</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Size</th>
+                  <th scope="col">Bust/Chest</th>
+                  <th scope="col">Body Length</th>
+                  <th scope="col">Shoulder</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">XS</th>
+                  <td>34 - 36"</td>
+                  <td>22.5"</td>
+                  <td>16.5"</td>
+                </tr>
+                <tr>
+                  <th scope="row">S</th>
+                  <td>37 - 39"</td>
+                  <td>24.0"</td>
+                  <td>17.5"</td>
+                </tr>
+                <tr>
+                  <th scope="row">M</th>
+                  <td>40 - 42"</td>
+                  <td>25.5"</td>
+                  <td>18.5"</td>
+                </tr>
+                <tr>
+                  <th scope="row">L</th>
+                  <td>43 - 45"</td>
+                  <td>27.0"</td>
+                  <td>19.5"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+
+        <details open>
+          <summary>Fabric & Care</summary>
+          <ul>
+            <li>100% Organic Heavyweight Cotton</li>
+            <li>Boxy dropped-shoulder silhouette</li>
+            <li>Machine wash cold inside-out, hang dry</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom-bar"><p>&copy; 2026 NOIR GIRLS. All rights reserved.</p></div>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const imgParam = params.get('img');
+    const titleParam = params.get('title');
+    const priceParam = params.get('price');
+    const stockParam = params.get('stock');
+
+    if (imgParam) {
+      document.getElementById('pdp-main-img').src = 'assets/images/' + imgParam;
+    }
+    if (titleParam) {
+      document.getElementById('pdp-title').textContent = decodeURIComponent(titleParam);
+      document.title = decodeURIComponent(titleParam) + " — NOIR GIRLS";
+    }
+    if (priceParam) {
+      document.getElementById('pdp-price').textContent = decodeURIComponent(priceParam);
+    }
+    if (stockParam === 'out') {
+      const buyBtn = document.getElementById('pdp-buy-btn');
+      buyBtn.textContent = 'Out of Stock';
+      buyBtn.classList.add('disabled');
+      buyBtn.removeAttribute('href');
+      document.getElementById('pdp-stock-badge').textContent = 'Currently Sold Out';
+      document.getElementById('pdp-stock-badge').style.color = '#ef4444';
+    }
+
+    function changeThumb(el) {
+      document.getElementById('pdp-main-img').src = el.src;
+      document.querySelectorAll('.pdp-thumbnails img').forEach(img => img.classList.remove('active'));
+      el.classList.add('active');
+    }
+
+    function selectSize(btn) {
+      document.querySelectorAll('.size-boxes .size-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+
+    function selectSwatch(swatch) {
+      document.querySelectorAll('.swatch-row .color-swatch').forEach(s => s.classList.remove('active'));
+      swatch.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

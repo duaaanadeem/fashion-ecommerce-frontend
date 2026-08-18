@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — NOIR GIRLS</title>
+  <meta name="description" content="Secure Checkout - Complete your order for NOIR GIRLS aesthetic streetwear.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23111111'/><text x='50%' y='68%' font-size='56' font-weight='900' fill='%23ffffff' text-anchor='middle' font-family='sans-serif'>N</text></svg>">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a href="#checkout-main" class="skip-link">Skip to checkout form</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-left">
+      <a href="products.html" class="back-link">&larr; Continue Shopping</a>
+    </div>
+
+    <div class="brand-logo">
+      <a href="index.html" aria-label="NOIR GIRLS Homepage">
+        <span class="logo-mark">▲</span>
+        <span class="logo-text">NOIR</span>
+      </a>
+    </div>
+
+    <div class="header-right">
+      <span class="cart-pill">
+        <span>Secure Checkout</span>
+        <span class="cart-badge">🔒</span>
+      </span>
+    </div>
+  </header>
+
+  <main class="checkout-layout" id="checkout-main">
+    <section class="checkout-form-container" aria-labelledby="checkout-title">
+      <h1 id="checkout-title">CHECKOUT</h1>
+
+      <nav class="checkout-steps" aria-label="Checkout steps">
+        <span class="step active">1. Information</span>
+        <span class="step-divider">&bull;</span>
+        <span class="step">2. Shipping</span>
+        <span class="step-divider">&bull;</span>
+        <span class="step">3. Payment</span>
+      </nav>
+
+      <form class="checkout-form" action="index.html" method="get">
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Contact Information</legend>
+          <div class="input-row">
+            <label for="email" class="sr-only">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Email Address (for order confirmation)" required>
+          </div>
+          <div class="input-row">
+            <label for="phone" class="sr-only">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number (+1 555-0199)" required>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Shipping Address</legend>
+          <div class="input-grid-2">
+            <div>
+              <label for="first-name" class="sr-only">First Name</label>
+              <input type="text" id="first-name" name="first_name" placeholder="First Name" required>
+            </div>
+            <div>
+              <label for="last-name" class="sr-only">Last Name</label>
+              <input type="text" id="last-name" name="last_name" placeholder="Last Name" required>
+            </div>
+          </div>
+          <div class="input-row">
+            <label for="address" class="sr-only">Street Address</label>
+            <input type="text" id="address" name="address" placeholder="Street Address, Apt / Suite" required>
+          </div>
+          <div class="input-grid-3">
+            <div>
+              <label for="city" class="sr-only">City</label>
+              <input type="text" id="city" name="city" placeholder="City" required>
+            </div>
+            <div>
+              <label for="state" class="sr-only">State</label>
+              <input type="text" id="state" name="state" placeholder="State / Province" required>
+            </div>
+            <div>
+              <label for="zip" class="sr-only">Postal Code</label>
+              <input type="text" id="zip" name="zip" placeholder="ZIP Code" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form-fieldset">
+          <legend class="form-legend">Payment Method</legend>
+          <div class="input-row">
+            <label for="card-num" class="sr-only">Card Number</label>
+            <input type="text" id="card-num" name="card_num" placeholder="Card Number (XXXX-XXXX-XXXX-XXXX)" required>
+          </div>
+          <div class="input-grid-2">
+            <div>
+              <label for="exp" class="sr-only">Expiry Date</label>
+              <input type="text" id="exp" name="exp" placeholder="MM / YY" required>
+            </div>
+            <div>
+              <label for="cvv" class="sr-only">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="CVV" required>
+            </div>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn-primary-large">Complete Order &rarr;</button>
+      </form>
+    </section>
+
+    <!-- Mini Cart Order Summary -->
+    <aside class="checkout-mini-summary" aria-labelledby="order-summary-title">
+      <h2 id="order-summary-title">YOUR BAG <sup>(02)</sup></h2>
+      
+      <article class="mini-product-row">
+        <img src="assets/images/product3.jpg" alt="Butterfly Floral Tee" width="60" height="80">
+        <div class="mini-details">
+          <h3>Butterfly Floral Tee</h3>
+          <p class="mini-meta">Color: White &bull; Size: S</p>
+          <span class="mini-qty">Qty: 1</span>
+        </div>
+        <strong class="mini-price">$65.00</strong>
+      </article>
+
+      <article class="mini-product-row">
+        <img src="assets/images/product4.jpg" alt="Pastel Stripe Polo" width="60" height="80">
+        <div class="mini-details">
+          <h3>Pastel Stripe Polo</h3>
+          <p class="mini-meta">Color: Grey Stripe &bull; Size: M</p>
+          <span class="mini-qty">Qty: 1</span>
+        </div>
+        <strong class="mini-price">$48.00</strong>
+      </article>
+
+      <div class="summary-breakdown">
+        <div class="summary-line"><span>Subtotal</span><span>$113.00</span></div>
+        <div class="summary-line"><span>Standard Shipping</span><span>$12.00</span></div>
+        <div class="summary-line"><span>Taxes (Estimated)</span><span>$0.00</span></div>
+        <div class="summary-line total"><span>Total Payable</span><span>$125.00</span></div>
+      </div>
+
+      <div class="checkout-trust-note">
+        <p>🔒 256-Bit Encrypted Checkout &bull; Free 30-Day Return Guarantee</p>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-bottom-bar"><p>&copy; 2026 NOIR GIRLS. All rights reserved.</p></div>
+  </footer>
+
+</body>
+</html>
