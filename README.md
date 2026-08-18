@@ -222,7 +222,3 @@ Potential future enhancements include:
 ## Project Purpose
 
 NOIR GIRLS was developed to demonstrate practical frontend development skills including **semantic HTML, responsive CSS, JavaScript DOM manipulation, URL-based routing, client-side filtering, accessibility, and form validation**.
-
-## License
-
-This project is intended for educational and portfolio purposes.
